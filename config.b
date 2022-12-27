@@ -67,7 +67,8 @@ set BC3_BASE=c:\bc
 :-**********************************************************************
 :- where is UPX and which options to use?
 :-**********************************************************************
-set XUPX=upx --8086 --best
+set XUPX=
+:-upx --8086 --best
 :- or use set XUPX=
 :- if you don't want to use it
 
@@ -107,17 +108,17 @@ set XUPX=upx --8086 --best
 :* select your default target: required CPU and what FAT system to support
 :**********************************************************************
 
-:- set XCPU=86
+set XCPU=86
 :- set XCPU=186
-set XCPU=386
+:- set XCPU=386
 
-:- set XFAT=16
-set XFAT=32
+set XFAT=16
+:- set XFAT=32
 
 :- Give extra compiler DEFINE flags here
 :- such as -DDEBUG : extra DEBUG output
 :-         -DDOSEMU : printf output goes to dosemu log
-:- set ALLCFLAGS=-DDEBUG
+set ALLCFLAGS=-DDEBUG -DDOSEMU
 
 
 :-
