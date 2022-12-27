@@ -44,7 +44,7 @@ jobs:
         )
 
     - name: upload
-      if: github.repository == 'FDOS/kernel' &&
+      if: github.repository == 'procode-rd/fdos-kernel' &&
         (github.event_name == 'push' || github.event.pull_request.merged == true)
       uses: actions/upload-artifact@v3
       with:
