@@ -81,4 +81,4 @@ LINK=$(XLINK) -Tkernel.ld -nostdlib -Wl,-Map,kernel.map -o kernel.exe $(OBJS) -W
 	$(NASM) -D$(COMPILER) $(NASMFLAGS) -o $@ $<
 
 .c.obj :
-	$(CC) $(CFLAGS) $*.c
+	$(CC) $(CFLAGS) -g -Wa,-adhln $*.c
