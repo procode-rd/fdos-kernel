@@ -17,7 +17,7 @@ OWTAR=ow-snapshot.tar.xz
 mkdir _output/gcc
 git clean -x -d -f -e _output -e _watcom -e $OWTAR
 make -C country clean
-make all COMPILER=gcc
+make all COMPILER=gcc fat16 86 DEBUG
 mv -n bin/KGC*.map bin/KGC*.sys _output/gcc/.
 mv -n bin/country.sys _output/gcc/.
 # GCC share
@@ -39,7 +39,7 @@ export WATCOM=$BUILD_DIR/_watcom
 mkdir _output/wc
 git clean -x -d -f -e _output -e _watcom -e $OWTAR
 make -C country clean
-make all COMPILER=owlinux
+make all COMPILER=owlinux fat16 86 DEBUG
 mv -n bin/KWC*.map bin/KWC*.sys _output/wc/.
 mv -n bin/country.sys _output/wc/.
 
