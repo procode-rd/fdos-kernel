@@ -20,6 +20,8 @@ make -C country clean
 make all COMPILER=gcc
 mv -n bin/KGC*.map bin/KGC*.sys _output/gcc/.
 mv -n bin/country.sys _output/gcc/.
+cp bin/*.* _output/gcc/
+
 # GCC share
 (cd share && make clobber && env COMPILER=gcc ./build.sh)
 mv -n share/share.com _output/gcc/.
